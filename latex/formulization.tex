@@ -1,0 +1,396 @@
+\documentclass[9pt]{article}
+\textheight  = 21cm
+\textwidth   = 17cm
+\topmargin = -1 cm
+\oddsidemargin = -0.5cm % Adjust to change left margin
+\evensidemargin = -0.5cm % For double-sided documents
+
+
+
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+
+\usepackage{booktabs}
+
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenx}
+\usepackage[english]{babel}
+\usepackage{newunicodechar}
+\newunicodechar{≈}{\approx}
+\usepackage[pdftex]{graphicx} 	%  uso de graficos en general
+\usepackage{subfigure} 		%  poder poner dos graficos como parte de uno
+\usepackage{fancyhdr} 		%  encabezado diferente para pag pares e impares
+\usepackage{epstopdf} 		%  Convertir .eps a .pdf (si fuera necesario)
+\usepackage{titling}
+\usepackage{fancyvrb,fancybox,calc} 
+\usepackage[svgnames]{xcolor} 
+\usepackage{enumerate}
+\usepackage{adjustbox}
+\usepackage{tabu}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{float}
+
+
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{comment}
+
+\captionsetup{justification=centerlast,labelfont=bf}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\DeclareGraphicsExtensions{.pdf,.png,.jpg} % busca en este orden! 
+
+\parindent=0mm
+
+\definecolor{light-gray}{gray}{0.94}
+\definecolor{textgray}{gray}{0.5}
+\newenvironment{verbcode}{\VerbatimEnvironment
+  \begin{Sbox} \color{textgray}\scriptsize
+  \begin{minipage}{\linewidth+2\fboxsep-2\fboxrule-12pt}    
+  \begin{Verbatim}
+}{\end{Verbatim}  
+  \end{minipage}   
+  \end{Sbox} \color{black}\normalsize
+  \fcolorbox{black}{light-gray}{\TheSbox} 
+} 
+
+
+\setlength{\parindent}{2.5em}
+\setlength{\parskip}{1em}
+
+\usepackage[colorinlistoftodos]{todonotes}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{xstring}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=blue,
+    citecolor=black,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\urlstyle{same}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{ltgray}{rgb}{0.5,0.5,0.5}
+
+\makeatletter
+\newif\ifcolname
+\colnamefalse
+
+\def\keywordcheck{%
+\IfStrEq*{\the\lst@token}{select}{\global\colnametrue}{}%
+\IfStrEq*{\the\lst@token}{where}{\global\colnametrue}{}%
+\IfStrEq*{\the\lst@token}{from}{\global\colnamefalse}{}%
+\color{blue}%
+}
+\def\setidcolor{%
+\ifcolname\color{purple}\else\color{black}\fi%
+}
+\makeatother
+
+\lstset{%
+    backgroundcolor=\color{white},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    commentstyle=\color{dkgreen},
+    deletekeywords={...},
+    escapeinside={\%*}{*)},
+    extendedchars=true,
+    frame=single,
+    keepspaces=true,
+    language=SQL,
+    otherkeywords={is},
+    morekeywords={*,modify,MODIFY,...},
+    keywordstyle=\keywordcheck,
+    identifierstyle=\setidcolor,
+    numbers=left,
+    numbersep=15pt,
+    numberstyle=\tiny,
+    rulecolor=\color{ltgray},
+    showspaces=false,
+    showstringspaces=false, 
+    showtabs=false,
+    stepnumber=1,
+    tabsize=4,
+    title=\lstname
+}
+
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{red}{rgb}{1,0,0}
+\lstset{language=SQL,
+  basicstyle={\small\ttfamily},
+  belowskip=3mm,
+  breakatwhitespace=true,
+  breaklines=true,
+  classoffset=0,
+  columns=flexible,
+  commentstyle=\color{dkgreen},
+  framexleftmargin=0.25em,
+  frameshape={}{yy}{}{}, %To remove to vertical lines on left, set `frameshape={}{}{}{}`
+  keywordstyle=\color{blue},
+  numbers=left, %If you want line numbers, set `numbers=left`
+  numberstyle=\tiny\color{gray},
+  showstringspaces=false,
+  stringstyle=\color{red},
+  tabsize=3,
+  xleftmargin =1em
+}
+
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{subfig}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Fill in the appropriate information below
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}     
+\newcommand\course{16.86 - Práctica Laboral}                            % <-- course name   
+\newcommand\hwnumber{AIPI 530 - Optimization in Practice}                                 % <-- homework number
+\newcommand\Information{\makebox[\linewidth][c]{\parbox[t]{5cm}{\centering Vishnu Mukundan \\ Sansa Zhao }}}
+
+                 % <-- personal information
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{3cm}
+            
+        \Huge
+        \textbf{Final Project: Milk Bank Case Study}
+            
+        \vspace{1cm}
+        \huge
+        \hwnumber
+            
+        \vspace{1.5cm}
+        \Large
+            
+        \textbf{\Information}                      % <-- author
+        
+            
+        \vfill
+
+        \today
+
+        \vfill
+        
+        % \course
+            
+        \vspace{0.5cm}
+            
+        \includegraphics[width=0.4\textwidth]{Imagenes/logo.png}
+        \\
+        
+        \Large
+        
+        
+            
+    \end{center}
+\end{titlepage}
+
+\pagestyle{fancy}
+\headheight=60pt 	%para cambiar el tamaño del encabezado
+\fancyhead[L]	{ }					
+\fancyhead[R] 	{ Milk Bank Case Study }
+
+
+
+\newpage
+\section{Problem Description}
+
+The Oklahoma Mothers' Milk Bank operates a network of 36 depots where donors drop off frozen breast milk. A single driver must collect milk from a subset of these depots before their freezers reach capacity. The objective is to minimize total travel time while ensuring that each depot is visited exactly once per route. 
+
+\vspace{3mm} 
+
+\noindent This problem is formulated as a Traveling Salesman Problem (TSP) for each pickup route. We solve two separate TSP instances: one for the Local (OKC Metro) depots and one for the Tulsa depots. The remaining 22 depots are serviced by courier and are not included in the routing model.
+
+\section{Compact mathematical formulation}
+
+
+\subsection{Decision Variables}
+
+\begin{equation*}
+  \text{depots of Routes}  = \text{ \{0,1,\dots,n-1\}},
+\end{equation*}
+where depot \(0\) denotes the Oklahoma Mothers' Milk Bank (the depot / start\&end location) and the remaining indices denote pickup depots.
+\begin{align*}
+x_{ij} &= 
+\begin{cases} 
+1 & \text{if the driver travels directly from depot } i \text{ to depot } j \\
+0 & \text{otherwise}
+\end{cases}
+\quad \forall i, j \in N \\[10pt]
+u_i &= \text{Position of depot } i \text{ in the route (for subtour elimination)}, \quad \forall i \in N \setminus \{0\}
+\end{align*}
+\begin{equation*}
+u_i \quad \forall i \in \mathcal{N}
+\end{equation*}
+\begin{equation*}
+u_i \in [0,\, n-1]\quad\text{(continuous)}.
+\end{equation*}
+\(\;u_i\) are auxiliary (order) variables used in the Miller–Tucker–Zemlin (MTZ) subtour elimination formulation: they capture the position of depot \(i\) in the tour (except that \(u_0\) is unconstrained by the MTZ inequalities below).
+
+
+\subsection{Objective function:}
+
+Minimize total travel time:
+
+\begin{equation}
+\min \sum_{i \in N} \sum_{j \in N} t_{ij} \cdot x_{ij}
+\end{equation}
+
+\newpage
+\subsection{Parameters: }
+
+% You can choose which line to use for your project, and remove the rest
+\[
+\begin{aligned}
+    TravelTime_{ij} &\quad \forall\, i,j \in N 
+\end{aligned}
+\]
+\[
+\begin{aligned}
+    n &= |N| = \text{Total number of depots in the route}
+\end{aligned}
+\]
+\begin{itemize}
+    \item Local route: $|N| = 9$ (HQ + 8 depots)
+    \item Tulsa route: $|N| = 7$ (HQ + 6 depots)
+\end{itemize}
+
+
+\subsection{Constraints}
+
+\paragraph{Leave each depot exactly once}
+\begin{equation}
+    \sum_{j\in\mathcal{N},\,j\neq i} x_{ij} = 1 \qquad \forall i\in\mathcal{N}
+\end{equation}
+(Each depot has exactly one outgoing arc.)
+
+\paragraph{Enter each depot exactly once}
+\begin{equation}
+    \sum_{i\in\mathcal{N},\,i\neq j} x_{ij} = 1 \qquad \forall j\in\mathcal{N}
+\end{equation}
+(Each depot has exactly one incoming arc.)
+
+\paragraph{No self-loops}
+\begin{equation}
+    x_{ii} = 0 \qquad \forall i\in\mathcal{N}
+\end{equation}
+
+\paragraph{MTZ subtour elimination (Miller--Tucker--Zemlin)}
+For all \(i,j\in\mathcal{N}\) with \(i\neq 0,\;j\neq 0,\;i\neq j\):
+\begin{equation}
+    u_i - u_j + n\,x_{ij} \le n - 1
+\end{equation}
+These inequalities forbid nontrivial subtours by enforcing a consistent ordering \(u_i\) for visited depots (the factor \(n\) is the usual MTZ multiplier for a model with \(n\) depots).
+
+\paragraph{Variable Bounds}
+\begin{align}
+x_{ij} &\in \{0, 1\}, \quad \forall i, j \in N \\
+u_i &\geq 0, \quad \forall i \in N \setminus \{0\}
+\end{align}
+
+\newpage
+\subsection{Notes on instances}
+
+We solve two separate instances of the above model:
+
+\begin{itemize}
+    \item \textbf{Local (OKC Metro)} with \(n_{\text{local}} = 9\) nodes (node indices \(0\) to \(8\)).
+    \item \textbf{Tulsa} with \(n_{\text{tulsa}} = 8\) nodes (node indices \(0\) to \(7\)).
+\end{itemize}
+
+\noindent Below we list the node index mapping used in the Local instance and the Tulsa instance (index 0 = depot).
+
+\subsection{Local instance: node list}
+\begin{align*}
+ 0 &: \text{Oklahoma Mothers' Milk Bank (depot)}\\
+ 1 &: \text{Variety Care- Lafayette}\\
+ 2 &: \text{Cleveland County Moore}\\
+ 3 &: \text{Edmond Hope Center}\\
+ 4 &: \text{Integris Southwest}\\
+ 5 &: \text{Integris Baptist}\\
+ 6 &: \text{St. Anthony Shawnee Hospital}\\
+ 7 &: \text{Canadian Valley}\\
+ 8 &: \text{OU Children's Hospital}
+\end{align*}
+
+\subsection{Tulsa instance: node list}
+\begin{align*}
+ 0 &: \text{Oklahoma Mothers' Milk Bank (depot)}\\
+ 1 &: \text{YWCA South}\\
+ 2 &: \text{Tulsa Hillcrest Hospital}\\
+ 3 &: \text{Jane Phillips Medical Center}\\
+ 4 &: \text{St. John Owasso}\\
+ 5 &: \text{YWCA East}\\
+ 6 &: \text{OBI}\\
+ 7 &: \text{(implicit return to depot)}
+\end{align*}
+
+\newpage
+\subsection{Results (from the Pyomo)}
+
+\paragraph{Local route (optimal):}
+\begin{verbatim}
+ 0: Oklahoma Mothers' Milk Bank (Start)
+ 1: Edmond Hope Center
+ 2: Integris Baptist
+ 3: Canadian Valley
+ 4: Integris Southwest
+ 5: Variety Care- Lafayette
+ 6: Cleveland County Moore
+ 7: St. Anthony Shawnee Hospital
+ 8: OU Children's Hospital
+ 9: Oklahoma Mothers' Milk Bank (Return)
+\end{verbatim}
+Total driving time: \(167.8\) minutes (≈ \(2.8\) hours).
+
+\paragraph{Tulsa route (optimal):}
+\begin{verbatim}
+ 0: Oklahoma Mothers' Milk Bank (Start)
+ 1: YWCA South
+ 2: Tulsa Hillcrest Hospital
+ 3: Jane Phillips Medical Center
+ 4: St. John Owasso
+ 5: YWCA East
+ 6: OBI
+ 7: Oklahoma Mothers' Milk Bank (Return)
+\end{verbatim}
+Total driving time: \(300.3\) minutes (≈ \(5.0\) hours).
+
+\end{document}
+
+
+
+
